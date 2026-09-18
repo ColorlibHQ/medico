@@ -1,0 +1,289 @@
+/**
+ * Styling for the Colorlib Customizer controls.
+ *
+ * Deliberately plain: it borrows the Customizer's own spacing and colours so
+ * the controls sit beside core's without looking bolted on.
+ */
+
+/* Separator ------------------------------------------------------------- */
+
+.colorlib-separator {
+	margin: 18px 0 4px;
+}
+
+.colorlib-separator__label {
+	display: block;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: .5px;
+	color: #50575e;
+}
+
+.colorlib-separator hr {
+	margin: 6px 0 0;
+	border: 0;
+	border-top: 1px solid #dcdcde;
+}
+
+/* Toggle ---------------------------------------------------------------- */
+
+.colorlib-toggle {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	margin-top: 4px;
+}
+
+.colorlib-toggle__input {
+	position: absolute;
+	opacity: 0;
+	width: 44px;
+	height: 24px;
+	margin: 0;
+	cursor: pointer;
+}
+
+.colorlib-toggle__track {
+	position: relative;
+	display: block;
+	width: 44px;
+	height: 24px;
+	border-radius: 12px;
+	background: #c3c4c7;
+	transition: background .15s ease-in-out;
+}
+
+.colorlib-toggle__track::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #fff;
+	transition: transform .15s ease-in-out;
+}
+
+.colorlib-toggle__input:checked + .colorlib-toggle__track {
+	background: #2271b1;
+}
+
+.colorlib-toggle__input:checked + .colorlib-toggle__track::after {
+	transform: translateX( 20px );
+}
+
+/* Keep the focus ring visible: the real checkbox is transparent. */
+.colorlib-toggle__input:focus-visible + .colorlib-toggle__track {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+/* Slider ---------------------------------------------------------------- */
+
+.colorlib-slider__row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.colorlib-slider__range {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.colorlib-slider__number {
+	flex: 0 0 72px;
+	width: 72px;
+}
+
+/* Layouts --------------------------------------------------------------- */
+
+.colorlib-layouts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 6px;
+}
+
+.colorlib-layouts__choice {
+	display: block;
+	border: 2px solid #dcdcde;
+	border-radius: 3px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 0;
+}
+
+.colorlib-layouts__choice.is-selected {
+	border-color: #2271b1;
+}
+
+.colorlib-layouts__choice img {
+	max-width: 68px;
+	height: auto;
+	display: block;
+}
+
+.colorlib-layouts__radio {
+	position: absolute;
+	opacity: 0;
+}
+
+.colorlib-layouts__radio:focus-visible + img {
+	outline: 2px solid #2271b1;
+}
+
+/* Icon picker ----------------------------------------------------------- */
+
+.colorlib-icon-picker__current {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 6px 0;
+}
+
+.colorlib-icon-picker__preview {
+	flex: 0 0 28px;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+.colorlib-icon-picker__grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	max-height: 180px;
+	overflow-y: auto;
+	margin-top: 6px;
+	padding: 6px;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	background: #fff;
+}
+
+.colorlib-icon-picker__icon {
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	background: transparent;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.colorlib-icon-picker__icon:hover,
+.colorlib-icon-picker__icon:focus-visible {
+	border-color: #2271b1;
+}
+
+.colorlib-icon-picker__icon.is-selected {
+	border-color: #2271b1;
+	background: #f0f6fc;
+}
+
+/* Repeater -------------------------------------------------------------- */
+
+.colorlib-repeater__rows {
+	margin: 8px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.colorlib-repeater__row {
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	margin-bottom: 6px;
+	background: #fff;
+}
+
+.colorlib-repeater__row-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px;
+	padding: 4px 4px 4px 8px;
+}
+
+.colorlib-repeater__toggle {
+	flex: 1 1 auto;
+	text-align: left;
+	background: none;
+	border: 0;
+	padding: 4px 0;
+	cursor: pointer;
+	font-weight: 600;
+	color: #1d2327;
+	/* Long titles must not push the buttons out of the panel. */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.colorlib-repeater__row-actions {
+	flex: 0 0 auto;
+	display: flex;
+	gap: 2px;
+}
+
+.colorlib-repeater__row-actions button {
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	background: #f6f7f7;
+	cursor: pointer;
+	line-height: 1;
+}
+
+.colorlib-repeater__remove:hover {
+	border-color: #d63638;
+	color: #d63638;
+}
+
+.colorlib-repeater__row-body {
+	padding: 8px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.colorlib-repeater__field {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.colorlib-repeater__field-label {
+	display: block;
+	margin-bottom: 3px;
+	font-size: 12px;
+	color: #50575e;
+}
+
+.colorlib-repeater__icon {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.colorlib-repeater__icon-preview {
+	flex: 0 0 26px;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+}
+
+.colorlib-repeater__media {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
