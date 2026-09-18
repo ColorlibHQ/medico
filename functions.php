@@ -144,3 +144,63 @@
 	
 	$Medico = new Medico();
 	
+
+
+/**
+ * A page by title, without get_page_by_title().
+ *
+ * WordPress deprecated get_page_by_title() in 6.2; this keeps the same
+ * signature and return shape so existing calls behave identically.
+ *
+ * @param string $title     Page title.
+ * @param string $output    OBJECT, ARRAY_A or ARRAY_N.
+ * @param string $post_type Post type to search.
+ * @return WP_Post|array|null
+ */
+if ( ! function_exists( 'medico_get_page_by_title' ) ) {
+	function medico_get_page_by_title( $title, $output = OBJECT, $post_type = 'page' ) {
+		$query = new WP_Query(
+			array(
+				'post_type'              => $post_type,
+				'title'                  => $title,
+				'post_status'            => 'all',
+				'posts_per_page'         => 1,
+				'no_found_rows'          => true,
+				'ignore_sticky_posts'    => true,
+				'update_post_term_cache' => false,
+				'update_post_meta_cache' => false,
+				'orderby'                => 'post_date ID',
+				'order'                  => 'ASC',
+			)
+		);
+
+		$page = ! empty( $query->posts ) ? $query->posts[0] : null;
+
+		if ( ! $page ) {
+			return null;
+		}
+
+		if ( ARRAY_A === $output ) {
+			return get_object_vars( $page );
+		}
+
+		if ( ARRAY_N === $output ) {
+			return array_values( get_object_vars( $page ) );
+		}
+
+		return $page;
+	}
+}
+
+
+/**
+ * Editor and markup support this theme predates.
+ */
+if ( ! function_exists( 'medico_modern_supports' ) ) {
+	function medico_modern_supports() {
+		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'editor-styles' );
+	}
+	add_action( 'after_setup_theme', 'medico_modern_supports', 20 );
+}
