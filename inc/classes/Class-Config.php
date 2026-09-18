@@ -288,26 +288,21 @@
 
 		// Google Font  
 		private function google_font(){
+			$font_url = '';
 
-			$fontUrl = '';
-			
+			/*
+			 * The families this theme uses are bundled under
+			 * assets/fonts/google, so nothing is fetched from Google and
+			 * no request leaves the visitor's browser for a third party.
+			 *
+			 * Translators can still turn the fonts off for scripts these
+			 * families do not cover.
+			 */
 			if ( 'off' !== _x( 'on', 'Google font: on or off', 'medico' ) ) {
-				
-				$font_families = array(
-					'Playfair+Display:400,700',
-					'Roboto:300,400,500,700'
-				);
-
-				$familyArgs = array(
-					'family' => htmlentities( implode( '|', $font_families ) ),
-					'subset' => urlencode( 'latin, latin-text' ),
-				);
-
-				$fontUrl = add_query_arg( $familyArgs, '//fonts.googleapis.com/css' );
+				$font_url = get_template_directory_uri() . '/assets/css/google-fonts.css';
 			}
-			
-			return esc_url_raw( $fontUrl );
 
+			return esc_url_raw( $font_url );
 		} //End google_font method
 
 		private function customizer_init(){
