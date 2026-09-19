@@ -70,7 +70,7 @@ class Medico_Departments extends Widget_Base {
                         'name'  => 'dep_icon',
                         'label' => __( 'Select Icon', 'medico' ),
                         'type'  => Controls_Manager::ICON,
-                        'default' => 'fa fa-500px',
+                        'default' => 'fa-brands fa-500px',
                         'label_block' => true,
                         'options' => medico_themify_icon()
                     ],

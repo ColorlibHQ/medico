@@ -32,7 +32,7 @@ $count          = count( $categories );
 	                            ?>
                                 <ul class="blog-info-link mt-3 mb-4">
 		                            <?php if ( has_category() ) {
-			                            echo '<li><i class="fa fa-tags"></i>';
+			                            echo '<li><i class="fa-solid fa-tags"></i>';
 			                            echo medico_post_cats();
 			                            echo '</li>';
 		                            }

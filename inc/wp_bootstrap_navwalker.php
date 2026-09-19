@@ -88,7 +88,7 @@ class medico_bootstrap_navwalker extends Walker_Nav_Menu {
 			// If item has_children add atts to a.
 			if ( $args->has_children && $depth === 0 ) {
 				$atts['href']   		= ! empty( $item->url ) ? $item->url : '';
-				$atts['data-toggle']	= 'dropdown';
+				$atts['data-bs-toggle']	= 'dropdown';
 				$atts['class']			= 'dropdown-toggle nav-link';
 				$atts['aria-haspopup']	= 'true';
 			} else {

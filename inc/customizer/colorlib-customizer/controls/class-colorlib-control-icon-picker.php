@@ -3,7 +3,7 @@
  * An icon class picker.
  *
  * The stored value is the icon's CSS class, exactly as the themes print it
- * ("fa fa-twitter", "ti-home"). A text input holds that value, so any class
+ * ("fa-brands fa-twitter", "ti-home"). A text input holds that value, so any class
  * keeps working — including icon sets this picker does not list. The grid
  * below it is a shortcut, not a constraint.
  *
@@ -98,7 +98,7 @@ if ( ! class_exists( 'Colorlib_Control_Icon_Picker' ) ) {
 						type="text"
 						class="colorlib-icon-picker__input widefat"
 						value="<?php echo esc_attr( $value ); ?>"
-						placeholder="fa fa-twitter"
+						placeholder="fa-brands fa-twitter"
 						<?php $this->link(); ?>
 					/>
 				</div>

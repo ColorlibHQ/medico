@@ -75,31 +75,31 @@ if ( ! function_exists( 'medico_social' ) ) {
 		
 			// Facebook
 			if( !empty( $url['facebook_url'] ) ){
-				echo '<a href="'.esc_url( $url['facebook_url'] ).'" class="topbar-social-item fa fa-facebook"></a>';
+				echo '<a href="'.esc_url( $url['facebook_url'] ).'" class="topbar-social-item fa-brands fa-facebook"></a>';
 			}
 			// Twitter
 			if( !empty( $url['twitter_url'] ) ){
-				echo '<a href="'.esc_url( $url['twitter_url'] ).'" class="topbar-social-item fa fa-twitter"></a>';
+				echo '<a href="'.esc_url( $url['twitter_url'] ).'" class="topbar-social-item fa-brands fa-twitter"></a>';
 			}
 			// Google
 			if( !empty( $url['google_url'] ) ){
-				echo '<a href="'.esc_url( $url['google_url'] ).'" class="topbar-social-item fa fa-google-plus"></a>';
+				echo '<a href="'.esc_url( $url['google_url'] ).'" class="topbar-social-item fa-brands fa-google-plus"></a>';
 			}
 			// Instagram
 			if( !empty( $url['instagram_url'] ) ){
-				echo '<a href="'.esc_url( $url['instagram_url'] ).'" class="topbar-social-item fa fa-instagram"></a>';
+				echo '<a href="'.esc_url( $url['instagram_url'] ).'" class="topbar-social-item fa-brands fa-instagram"></a>';
 			}
 			// Pinterest
 			if( !empty( $url['pinterest_url'] ) ){
-				echo '<a href="'.esc_url( $url['pinterest_url'] ).'" class="topbar-social-item fa fa-pinterest-p"></a>';
+				echo '<a href="'.esc_url( $url['pinterest_url'] ).'" class="topbar-social-item fa-brands fa-pinterest-p"></a>';
 			}
 			// Snapchat
 			if( !empty( $url['snapchat_url'] ) ){
-				echo '<a href="'.esc_url( $url['snapchat_url'] ).'" class="topbar-social-item fa fa-snapchat-ghost"></a>';
+				echo '<a href="'.esc_url( $url['snapchat_url'] ).'" class="topbar-social-item fa-brands fa-snapchat-ghost"></a>';
 			}
 			// Youtube
 			if( !empty( $url['youtube_url'] ) ){
-				echo '<a href="'.esc_url( $url['youtube_url'] ).'" class="topbar-social-item fa fa-youtube-play"></a>';
+				echo '<a href="'.esc_url( $url['youtube_url'] ).'" class="topbar-social-item fa-brands fa-youtube"></a>';
 			}
 			
 		

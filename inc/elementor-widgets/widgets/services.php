@@ -79,7 +79,7 @@ class Medico_Services extends Widget_Base {
                     [
                         'name'        => 'icon',
                         'label'       => __( 'Select Icon', 'medico' ),
-                        'default'     => 'fa fa-500px',
+                        'default'     => 'fa-brands fa-500px',
                         'type'        => Controls_Manager::ICON,
                         'label_block' => true,
                         'options'     => medico_themify_icon(),

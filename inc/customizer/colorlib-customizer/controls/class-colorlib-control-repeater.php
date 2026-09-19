@@ -155,7 +155,7 @@ if ( ! class_exists( 'Colorlib_Control_Repeater' ) ) {
 						?>
 						<span class="colorlib-repeater__icon">
 							<i class="colorlib-repeater__icon-preview <?php echo esc_attr( $value ); ?>" aria-hidden="true"></i>
-							<input type="text" class="widefat" data-field="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_attr( $value ); ?>" placeholder="fa fa-twitter" />
+							<input type="text" class="widefat" data-field="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_attr( $value ); ?>" placeholder="fa-brands fa-twitter" />
 						</span>
 						<?php
 						break;
