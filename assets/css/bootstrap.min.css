@@ -118,3 +118,28 @@
 .container-xxl {
   --bs-gutter-x: 30px;
 }
+
+
+/*
+ * Bootstrap 5 added a 1320px container above 1400px. These layouts were drawn
+ * for version 4, whose container stops at 1140px.
+ */
+@media (min-width: 1400px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1140px;
+  }
+}
+
+/*
+ * Version 4 did not underline links and version 5 does, so every menu item,
+ * card title and footer link picked up an underline. Hover is left alone:
+ * a:hover would outrank .btn and underline buttons.
+ */
+a {
+  text-decoration: none;
+}
