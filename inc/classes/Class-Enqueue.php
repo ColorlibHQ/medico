@@ -79,7 +79,7 @@
 							$file = $script['file'];
 						}
 						// Check dependency
-						$dependency = array('jquery');
+						$dependency = array();
 						if( !empty( $script['dependency'] ) ){
 							$dependency = $script['dependency'];
 						}

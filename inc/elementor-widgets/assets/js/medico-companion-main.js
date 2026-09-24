@@ -1,8 +1,10 @@
-(function ($) {
-    'use strict';
+/**
+ * Medico Elementor widgets, front end: the Mailchimp signup form. No jQuery.
+ */
+(function () {
+  'use strict';
 
-    //  Mailchimp ajax
-    $('#mc_embed_signup').find('form').ajaxChimp();
-
-
-})(jQuery);
+  if (window.ColorlibUI) {
+    window.ColorlibUI.ajaxChimp('#mc_embed_signup form');
+  }
+}());
