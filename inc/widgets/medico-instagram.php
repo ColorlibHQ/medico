@@ -23,7 +23,9 @@ class medico_instagram_photo extends WP_Widget {
 			echo wp_kses_post( $args['before_title'] . $title . $args['after_title'] ); ?>
 
         <div class="cp-module-inner">
-            <div class="cp-instagram-photos instagram_row flex-wrap" data-username="<?php print $insta_user ?>" data-items="<?php print $insta_items ?>"></div>
+            <?php if ( ! empty( $insta_user ) ) : ?>
+            <a class="cp-instagram-link" href="<?php echo esc_url( 'https://www.instagram.com/' . rawurlencode( $insta_user ) . '/' ); ?>" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i> @<?php echo esc_html( $insta_user ); ?></a>
+            <?php endif; ?>
 
         </div>
 

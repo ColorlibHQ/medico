@@ -236,20 +236,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'medico-nice-select-js',
-						'file' 			=> $jsPath.'jquery.nice-select.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'medico-instagram-feed-js',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'medico-owl-carousel-js',
 						'file' 			=> $jsPath.'owl.carousel.min.js',
 						'dependency' 	=> array( 'jquery' ),
@@ -265,10 +251,17 @@
 					),
 					
 					array(
+						'handler'		=> 'medico-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
+						'in_footer' 	=> true
+					),
+					array(
 						'handler'		=> 'medico-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> $this->medico_version,
+						'dependency' 	=> array( 'jquery', 'medico-ui-js' ),
+						'version' 		=> $this->medico_version . '-s1',
 						'in_footer' 	=> true
 					),
 
