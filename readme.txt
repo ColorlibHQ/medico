@@ -1,11 +1,12 @@
 === Colorlib ===
 Contributors: Colorlib
-Requires at least: WordPress 4.9
-Tested : WordPress 5.3.2
+Requires at least: 6.6
+Tested up to: 7.1
 Version: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, left-sidebar, right-sidebar, flexible-header, custom-colors
+Requires PHP: 7.4
 Text Domain: medico
 
 == Description ==
